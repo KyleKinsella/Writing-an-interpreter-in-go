@@ -6,6 +6,7 @@ import (
 	// "monkey/token"
 	"monkey/lexer"
 	"monkey/parser"
+	"monkey/object"
 )
 
 func printNode(node ast.Node, indent string) {
@@ -46,9 +47,17 @@ func printNode(node ast.Node, indent string) {
 	}
 }
 
-func add(a, b int) (int, error) {
-	return a + b, nil
-}
+// func add(a, b int) (int, error) {
+// 	return a + b, nil
+// }
+
+// func understandingEnv(node *ast.Identifier, env *object.Environment) object.Object {
+// 	get, ok := env.Get(node.Value)
+// 	if !ok {
+// 		panic(ok)
+// 	}
+// 	return get
+// }
 
 func main() {
 	// input := "let x = 5;"
@@ -80,9 +89,29 @@ func main() {
 	fmt.Println("AST:")
 	printNode(program, "")
 
-	add, err := add(1, 2)
-	if err != nil {
-		panic(err)
+	// add, err := add(1, 2)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println("add:", add)
+
+
+	// I don't really understand what the "environment" is. this is for the bindings
+
+	env := object.NewEnvironment()
+	fmt.Println("\n\nenv:", env)
+
+	get, ok := env.Get("kyle")
+	if !ok {
+		panic(ok)
 	}
-	fmt.Println("add:", add)
+	fmt.Println("get:", get)
+
+	// understandingEnv(program, env)
+
+	// get, ok := env.Get(program.String())
+	// if !ok {
+	// 	panic(ok)
+	// }
+	// fmt.Println("get:", get)
 }
