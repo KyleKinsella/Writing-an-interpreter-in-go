@@ -3,10 +3,9 @@ package main
 import (
 	"fmt"
 	"monkey/ast"
-	// "monkey/token"
 	"monkey/lexer"
 	"monkey/parser"
-	"monkey/object"
+	// "monkey/token"
 )
 
 func printNode(node ast.Node, indent string) {
@@ -47,32 +46,9 @@ func printNode(node ast.Node, indent string) {
 	}
 }
 
-// func add(a, b int) (int, error) {
-// 	return a + b, nil
-// }
-
-// func understandingEnv(node *ast.Identifier, env *object.Environment) object.Object {
-// 	get, ok := env.Get(node.Value)
-// 	if !ok {
-// 		panic(ok)
-// 	}
-// 	return get
-// }
-
 func main() {
-	// input := "let x = 5;"
-
-	// lexer := lexer.New(input)
-	// fmt.Println("lexer:", lexer)
-
-	// for tok := lexer.NextToken(); tok.Type != token.EOF; tok = lexer.NextToken() {
-	// 	fmt.Println(tok)
- 	// }
-
-	// parser := parser.New(lexer)
-	// fmt.Println("\nparser:", parser)
-
-	input := "let x = 5; return x;"
+	// input := "let x = 5; return x;"
+	input := "5 + 2 * 3"
 
 	l := lexer.New(input)
 	p := parser.New(l)
@@ -89,29 +65,25 @@ func main() {
 	fmt.Println("AST:")
 	printNode(program, "")
 
-	// add, err := add(1, 2)
-	// if err != nil {
-	// 	panic(err)
+
+
+	// fmt.Println("\n\n\n\n\nprogram:\n", program, "\n")
+
+	// for _, p := range program.Statements {
+		// fmt.Println("program.Statement contains:", p)
 	// }
-	// fmt.Println("add:", add)
 
+	// let := ast.LetStatement{Token: token.Token{Type: token.LET, Literal: "x"}}
+	// fmt.Println(let)
 
-	// I don't really understand what the "environment" is. this is for the bindings
+	// let.Name = &ast.Identifier{Value: "test"}
+	// fmt.Println(let.Name)
 
-	env := object.NewEnvironment()
-	fmt.Println("\n\nenv:", env)
+	// let.Value = let.Token.Literal()
 
-	get, ok := env.Get("kyle")
-	if !ok {
-		panic(ok)
-	}
-	fmt.Println("get:", get)
+	// let := ast.LetStatement{Token: token.Token{Type: token.LET, Literal: "x"}}
+	// let.Name = &ast.Identifier{Value: "test"}
+	// let.Value = let.
 
-	// understandingEnv(program, env)
-
-	// get, ok := env.Get(program.String())
-	// if !ok {
-	// 	panic(ok)
-	// }
-	// fmt.Println("get:", get)
+	// fmt.Println(let.String())
 }
