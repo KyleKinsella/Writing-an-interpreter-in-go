@@ -27,9 +27,12 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
-FILE_NAME_0=911;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcode%2Fcode.go;0;4
-FILE_NAME_1=595;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcode%2Fcode_test.go;0;4
+current_page=3
+FILE_NAME_0=645;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcode%2Fcode.go;0;4
+FILE_NAME_1=594;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcode%2Fcode_test.go;0;4
+FILE_NAME_2=359;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcompiler%2Fcompiler.go;0;4
+FILE_NAME_3=1374;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fcompiler%2Fcompiler_test.go;0;4
+FILE_NAME_4=1303;Go;0;EUTF-8;1;1;0;%2Fhome%2Fkylekinsella%2FDocuments%2FWriting-an-interpreter-in-go%2Fobject%2Fobject.go;0;4
 
 [VTE]
-last_dir=/home/kylekinsella/Documents/Writing-an-interpreter-in-go/code
+last_dir=/home/kylekinsella/Documents/Writing-an-interpreter-in-go/compiler
