@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"os"
 	"os/user"
-	"monkey/repl" // this is for my lexer and evaluator
+	//"monkey/repl" // this is for my lexer and evaluator
 	//"monkey/rppl" // this is for my parser
+	"monkey/compilerREPL"
 )
 
 func main() {
@@ -20,5 +21,7 @@ func main() {
 	
 	//repl.Start(os.Stdin, os.Stdout)
 	//rppl.Start(os.Stdin, os.Stdout)
-	repl.StartEvaluator(os.Stdin, os.Stdout)
+	//repl.StartEvaluator(os.Stdin, os.Stdout)
+	
+	compilerREPL.Start(os.Stdin, os.Stdout)
 }
