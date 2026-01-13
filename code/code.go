@@ -24,6 +24,12 @@ const (
 	OpDiv
 	OpTrue
 	OpFalse
+	OpEqual
+	OpNotEqual
+	OpGreaterThan
+	//OpLessThan
+	OpMinus
+	OpBang
 )
 
 var definitions = map[Opcode]*Definition {
@@ -35,6 +41,12 @@ var definitions = map[Opcode]*Definition {
 	OpDiv: {"OpDiv", []int{}},
 	OpTrue: {"OpTrue", []int{}},
 	OpFalse: {"OpFalse", []int{}},
+	OpEqual: {"OpEqual", []int{}},
+	OpNotEqual: {"OpNotEqual", []int{}},
+	OpGreaterThan: {"OpGreaterThan", []int{}},
+	//OpLessThan: {"OpLessThan", []int{}},
+	OpMinus: {"OpMinus", []int{}},
+	OpBang: {"OpBang", []int{}},
 }
 
 func Lookup(op byte) (*Definition, error) {
