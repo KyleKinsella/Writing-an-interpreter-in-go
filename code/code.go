@@ -30,6 +30,9 @@ const (
 	//OpLessThan
 	OpMinus
 	OpBang
+	OpJumpNotTruthy // this will tell the VM to only jump if the value on top of the stack is not false or null
+	OpJump // this will tell the VM to just jump to the value of the parameter 
+	OpNull
 )
 
 var definitions = map[Opcode]*Definition {
@@ -47,6 +50,9 @@ var definitions = map[Opcode]*Definition {
 	//OpLessThan: {"OpLessThan", []int{}},
 	OpMinus: {"OpMinus", []int{}},
 	OpBang: {"OpBang", []int{}},
+	OpJumpNotTruthy: {"OpJumpNotTruthy", []int{2}},
+	OpJump: {"OpJump", []int{2}},
+	OpNull: {"OpNull", []int{}},
 }
 
 func Lookup(op byte) (*Definition, error) {
