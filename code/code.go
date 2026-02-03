@@ -38,6 +38,9 @@ const (
 	OpArray
 	OpHash
 	OpIndex
+	OpCall
+	OpReturnValue
+	OpReturn // this is for returning no value! (aka NULL)
 )
 
 var definitions = map[Opcode]*Definition {
@@ -63,6 +66,9 @@ var definitions = map[Opcode]*Definition {
 	OpArray: {"OpArray", []int{2}},
 	OpHash: {"OpHash", []int{2}},
 	OpIndex: {"OpIndex", []int{}},
+	OpCall: {"OpCall", []int{}},
+	OpReturnValue: {"OpReturnValue", []int{}},
+	OpReturn: {"OpReturn", []int{}},
 }
 
 func Lookup(op byte) (*Definition, error) {
